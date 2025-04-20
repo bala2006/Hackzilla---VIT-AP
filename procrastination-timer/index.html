@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Procrastination Timer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fun productivity timer with Pomodoro and motivational memes/quotes" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Procrastination Timer</h1>
+      <p class="subtitle">Crush your goals with motivation — one Pomodoro at a time.</p>
+    </header>
+
+    <main class="timer-section">
+      <section class="custom-settings">
+        <div class="custom-time">
+          <label for="time-input">Set Session Time (minutes):</label>
+          <input type="number" id="time-input" min="1" max="120" value="25" />
+          <label for="time-input-sec">Set Session Time (seconds):</label>
+          <input type="number" id="time-input-sec" min="0" max="59" value="0" />
+        </div>
+        <div class="break-time">
+          <label for="break-input">Set Break Time (minutes):</label>
+          <input type="number" id="break-input" min="1" max="60" value="5" />
+          <label for="break-input-sec">Set Break Time (seconds):</label>
+          <input type="number" id="break-input-sec" min="0" max="59" value="0" />
+        </div>
+      </section>
+
+      <div class="timer-display">
+        <h2 id="timer-display">25:00:00</h2>
+        <p id="session-type">Work Session</p>
+      </div>
+
+      <div class="control-buttons">
+        <button id="start-btn">Start</button>
+        <button id="reset-btn">Reset</button>
+        <button id="swap-btn">Swap Work/Break</button>
+      </div>
+    </main>
+
+    <section class="progress">
+      <div class="streak">
+        <p>🔥 Current Streak: <span id="streak-count">0</span></p>
+      </div>
+      <div class="history">
+        <p>✅ Sessions Completed Today: <span id="session-count">0</span></p>
+      </div>
+    </section>
+
+    <section class="extras">
+      <details>
+        <summary>✨ How It Works</summary>
+        <ul>
+          <li>Set your desired session time (default is 25 mins).</li>
+          <li>Work until the timer ends.</li>
+          <li>Get rewarded with a meme or quote!</li>
+          <li>Short break follows (optional).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>💡 Tips for Focus</summary>
+        <ul>
+          <li>Use noise‑cancelling headphones or Lo‑Fi music.</li>
+          <li>Work in short, intense bursts.</li>
+          <li>Don’t skip your breaks!</li>
+          <li>Track your streak to stay consistent.</li>
+        </ul>
+      </details>
+    </section>
+
+    <div class="motivation" id="motivation-box" style="display: none;">
+      <div id="motivation-content"></div>
+      <button id="close-motivation-btn">Close</button>
+    </div>
+
+    <footer>
+      <p>Made with ❤️ to fight against procrastination by <b>Team Glitter</b></p>
+    </footer>
+  </div>
+
+  <script src="scripts/timer.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
